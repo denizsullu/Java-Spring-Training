@@ -14,7 +14,8 @@ public class Main {
 		double dolarBugun = 18.30;
 		
 		boolean dolarDustuMu = false;
-		
+		System.out.println(vade);
+		System.out.println(dolarDustuMu);
 		String okYonu = "";
 		
 		if (dolarBugun<dolarDun) {
