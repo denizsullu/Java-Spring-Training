@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>inheritance</name>
+	<name>oopWithNLayeredApp</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1687465638737</id>
+			<id>1687465638750</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
