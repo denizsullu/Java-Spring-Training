@@ -1,3 +1,2 @@
-## Author : Deniz Süllü
-## java
+##
  
