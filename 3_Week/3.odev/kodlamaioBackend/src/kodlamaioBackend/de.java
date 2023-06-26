@@ -8,7 +8,7 @@ import kodlamaioBackend.dataAccess.HibernateDao;
 import kodlamaioBackend.dataAccess.JdbcDao;
 import kodlamaioBackend.entities.Courses;
 
-public class Main {
+public class de {
 
 	public static void main(String[] args) {
 		Courses cour = new Courses("Engin Demiroğ","Yazılım","Java ile programlama",20);
