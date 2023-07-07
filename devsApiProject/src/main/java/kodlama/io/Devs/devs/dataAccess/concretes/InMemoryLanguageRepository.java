@@ -15,11 +15,7 @@ public class InMemoryLanguageRepository implements LanguageRepository {
 	
 	public InMemoryLanguageRepository() {
 		progLanguages = new ArrayList<ProgLanguage>();
-		progLanguages.add(new ProgLanguage(0,"Java"));
-		progLanguages.add(new ProgLanguage(1,"Python"));
-		progLanguages.add(new ProgLanguage(2,"c++"));
-		progLanguages.add(new ProgLanguage(3,"Javascript"));
-		progLanguages.add(new ProgLanguage(4,"c"));
+		
 	}
 
 
@@ -27,34 +23,57 @@ public class InMemoryLanguageRepository implements LanguageRepository {
 	public List<ProgLanguage> getAll() {
 		return progLanguages;
 	}
+	
+	@Override
+	public ProgLanguage getById(int i) {
+		return progLanguages.get(i);
+	}
 
 
 	@Override
-	public void add() {
-		progLanguages.add(new ProgLanguage(4, "deniz"));
+	public ProgLanguage delete(int id) {
+		return progLanguages.remove(id);
 		
 	}
 
 
 	@Override
-	public void delete(int index) {
-		progLanguages.remove(index);
+	public void addLanguage(ProgLanguage language) throws Exception {
+		for (ProgLanguage q : progLanguages) {
+			if(q.getLanguage().equals(language.getLanguage())) {
+				throw new Exception("Program ismi tekrar edilemez");
+			}
+		}
+		if(language.getLanguage().isEmpty()) {
+			throw new Exception("Program ismi boş geçilemez");
+		}
 		
+	
+		progLanguages.add(language);
 	}
 
 
 	@Override
-	public void update(int index,String string) {
-		progLanguages.get(index).setLanguage(string);;
+	public void update(int i, ProgLanguage language) {
+		 progLanguages.set(i, language);
+		
 		
 	}
 
 
-	@Override
-	public void get(int index) {
-		progLanguages.get(index);
-		
-		
-	}
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
 
 }

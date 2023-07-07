@@ -22,6 +22,31 @@ public class LanguageManager implements LanguageService {
 		return languageRepository.getAll();
 	}
 
+	@Override
+	public void delete(int id) {
+		//iş kuralları
+		languageRepository.delete(id);
+		
+	}
+
+	@Override
+	public ProgLanguage getById(int i) {
+		return languageRepository.getById(i);
+	}
+
+	@Override
+	public void addLanguage(ProgLanguage language) throws Exception {
+		 languageRepository.addLanguage(language);
+	}
+
+	@Override
+	public void update(int i, ProgLanguage language) {
+		 languageRepository.update(i, language);
+	}
+
+	
+	
+
 	
 
 }

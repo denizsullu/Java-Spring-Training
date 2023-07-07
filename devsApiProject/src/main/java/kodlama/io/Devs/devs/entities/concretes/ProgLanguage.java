@@ -4,9 +4,10 @@ public class ProgLanguage {
 	private int id;
 	private String language;
 	public ProgLanguage() {
-		super();
+		
 	}
 	public ProgLanguage(int id, String language) {
+		super();
 		this.id = id;
 		this.language = language;
 	}
@@ -23,4 +24,7 @@ public class ProgLanguage {
 		this.language = language;
 	}
 	
+	
+	
+
 }

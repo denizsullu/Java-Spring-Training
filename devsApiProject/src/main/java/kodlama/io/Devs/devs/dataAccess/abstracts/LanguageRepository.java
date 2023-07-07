@@ -6,8 +6,9 @@ import kodlama.io.Devs.devs.entities.concretes.ProgLanguage;
 
 public interface LanguageRepository {
 	List<ProgLanguage> getAll();
-	void add();
-	void delete(int index);
-	void update(int index,String string);
-	void get(int index);
+	ProgLanguage getById(int i);
+	ProgLanguage delete(int id);
+	void addLanguage(ProgLanguage language) throws Exception;
+	void update(int i,ProgLanguage language);
+	
 }
